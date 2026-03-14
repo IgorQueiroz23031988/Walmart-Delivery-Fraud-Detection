@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
+import os
 
 # ---------------------------------------------------
 # PAGE CONFIG
@@ -14,7 +15,11 @@ st.set_page_config(
 # ---------------------------------------------------
 # LOAD DATA
 # ---------------------------------------------------
-df_risk = pd.read_csv("../data/df_final_risk_summary.csv")
+# Get the directory where app.py is located
+base_path = os.path.dirname(__file__)
+data_path = os.path.join(base_path, "data", "df_final_risk_summary.csv")
+
+df_risk = pd.read_csv(data_path)
 
 # quartile thresholds (same logic as fraud framework)
 q1 = df_risk["risk_score_0_100"].quantile(0.25)
