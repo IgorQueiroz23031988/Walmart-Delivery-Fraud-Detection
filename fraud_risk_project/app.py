@@ -15,7 +15,7 @@ st.set_page_config(
 # LOAD DATA
 # ---------------------------------------------------
 
-df_risk = pd.read_csv("df_final_risk_summary.csv")
+df_risk = pd.read_csv("data/df_final_risk_summary.csv")
 
 # quartile thresholds (same logic as fraud framework)
 q1 = df_risk["risk_score_0_100"].quantile(0.25)
