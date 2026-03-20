@@ -19,12 +19,12 @@ st.set_page_config(
 # ---------------------------------------------------
 # LOAD DATA
 # ---------------------------------------------------
-data_path = 'C:/Users/Igor/Repos/Walmart-Delivery-Fraud-Detection/fraud_risk_project/data/'
-df_risk = pd.read_csv(data_path + "df_final_risk_summary.csv")
+# data_path = 'C:/Users/Igor/Repos/Walmart-Delivery-Fraud-Detection/fraud_risk_project/data/'
+# df_risk = pd.read_csv(data_path + "df_final_risk_summary.csv")
 
-# base_path = os.path.dirname(__file__)
-# data_path = os.path.join(base_path, "data", "df_final_risk_summary.csv")
-# df_risk = pd.read_csv(data_path)
+base_path = os.path.dirname(__file__)
+data_path = os.path.join(base_path, "data", "df_final_risk_summary.csv")
+df_risk = pd.read_csv(data_path)
 
 # quartile thresholds (same logic as fraud framework)
 q1 = df_risk["risk_score_0_100"].quantile(0.25)
