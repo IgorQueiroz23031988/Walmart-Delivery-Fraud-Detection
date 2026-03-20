@@ -1,3 +1,7 @@
+# Exporting the the risk fraud dataset
+# df_final_risk_summary.to_csv('df_final_risk_summary.csv', index=False)
+
+# Creating the app online using Streamlit
 import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
@@ -15,11 +19,12 @@ st.set_page_config(
 # ---------------------------------------------------
 # LOAD DATA
 # ---------------------------------------------------
-# Get the directory where app.py is located
-base_path = os.path.dirname(__file__)
-data_path = os.path.join(base_path, "data", "df_final_risk_summary.csv")
+data_path = 'C:/Users/Igor/Repos/Walmart-Delivery-Fraud-Detection/fraud_risk_project/data/'
+df_risk = pd.read_csv(data_path + "df_final_risk_summary.csv")
 
-df_risk = pd.read_csv(data_path)
+# base_path = os.path.dirname(__file__)
+# data_path = os.path.join(base_path, "data", "df_final_risk_summary.csv")
+# df_risk = pd.read_csv(data_path)
 
 # quartile thresholds (same logic as fraud framework)
 q1 = df_risk["risk_score_0_100"].quantile(0.25)
@@ -57,6 +62,40 @@ def get_segment_score(attribute, segment):
 
     return None
 
+# ---------------------------------------------------
+#RISK LEVEL RECOMENDATIONS
+# ---------------------------------------------------
+
+def risk_recommendation(level):
+
+    if level == "Critical Risk":
+        return """
+🚨 **Critical Risk Actions**
+- Enforce delivery confirmation (photo + PIN +Verification)
+- Use tamper-proof packaging for high-value items
+- Flag multiple drivers ID accounts
+- Track high-risk segments in real time
+        """
+
+    elif level == "High Risk":
+        return """
+⚠️ **High Risk Actions**
+- Add picking validation
+- User automated order checks
+        """
+
+    elif level == "Moderate Risk":
+        return """
+⚙️ **Moderate Risk Actions**
+- Standard monitoring
+- Track for pattern escalation
+        """
+
+    else:
+        return """
+✅ **Low Risk**
+- No immediate action required
+        """
 
 # ---------------------------------------------------
 # TITLE
@@ -223,6 +262,13 @@ if st.button("Calculate Fraud Risk"):
         ))
 
         st.plotly_chart(fig, use_container_width=True)
+
+# ---------------------------------------------------
+# 🔥 RECOMMENDED ACTIONS
+# ---------------------------------------------------
+
+    st.subheader("Recommended Actions")
+    st.info(risk_recommendation(level))
 
 # ---------------------------------------------------
 # RISK BREAKDOWN
