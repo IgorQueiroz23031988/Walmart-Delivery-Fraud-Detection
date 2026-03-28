@@ -152,7 +152,7 @@ Since no fraud labels are available, a **Fraud Risk Score** was developed to ide
 
 ---
 
-# Fraud Risk Simulator
+# 🤖 Fraud Risk Simulator
 
 An interactive Streamlit application was developed to simulate delivery fraud risk.
 
