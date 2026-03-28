@@ -248,7 +248,7 @@ Streamlit application to estimate delivery risk based on input attributes
 
 ---
 
-# Future Improvements
+# 🚀 Future Improvements
 
 Possible extensions include:
 
