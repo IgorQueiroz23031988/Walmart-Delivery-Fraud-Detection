@@ -3,133 +3,152 @@
 ![Status](https://img.shields.io/badge/Project-Completed-green)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
+# 🚚 Walmart Delivery Fraud Risk Analysis
 
-# Walmart Delivery Fraud Detection
+## 📌 Project Overview
 
-This project investigates **missing item incidents in Walmart delivery orders** to distinguish between operational errors and potential fraud patterns.
+This project investigates operational risks related to missing items in delivery orders, focusing on identifying patterns that may indicate fraud or operational failures.
 
-The analysis combines exploratory data analysis, hypothesis testing, and a custom fraud risk scoring framework to identify high-risk delivery scenarios.
+The analysis combines **Exploratory Data Analysis (EDA)**, **Hypothesis Testing**, and a **Fraud Risk Score Framework** to detect high-risk operational scenarios and support decision-making.
 
-An interactive **Fraud Risk Simulator** was developed using Streamlit to operationalize the model.
-
----
-
-# Project Overview
-
-Missing items in delivery orders generate financial losses and customer dissatisfaction.  
-However, identifying whether these incidents are caused by operational issues or fraudulent behavior can be challenging.
-
-This project aims to:
-
-- Analyze patterns in missing items
-- Identify operational and behavioral risk factors
-- Build a fraud risk scoring framework
-- Develop an interactive risk simulator
+### 🔍 Final Solution Includes:
+- Full analytical report  
+- Executive presentation  
+- Interactive dashboard  
+- Fraud risk prediction simulator  
 
 ---
 
-# Dataset
+## 💼 Business Problem
 
-The dataset contains information about:
+Delivery operations reported an increasing number of missing items, leading to operational complaints and financial losses.
 
-- Orders
-- Drivers
-- Customers
-- Products
-- Missing items
+However, the dataset does not contain fraud labels, preventing traditional supervised fraud detection.
 
-Key features include:
-
-Operational variables
-- delivery period
-- month
-- day of week
-- region
-
-Driver variables
-- driver ID patterns
-- driver age group
-- trip volume
-
-Customer variables
-- customer age group
-
-Product variables
-- macro category
-- price bin
+### 🎯 Objective:
+Identify patterns of operational risk and potential fraud indicators across:
+- Orders  
+- Products  
+- Drivers  
+- Customers  
 
 ---
 
-# Methodology
+## 🧩 Project Structure
 
-The analysis followed these steps:
+The analysis follows a structured analytics workflow:
 
-1. Exploratory Data Analysis (EDA)
-2. Hypothesis testing across operational, driver, customer, and product dimensions
-3. Development of a **Fraud Risk Framework**
-4. Creation of a **risk scoring model**
-5. Development of an **interactive fraud risk simulator**
-
----
-
-# Fraud Risk Framework
-
-Risk scores are calculated using normalized metrics including:
-
-- Missing item incidence rate
-- Weighted missing item rate
-- Average revenue loss
-- Weighted revenue loss
-- Order volume
-
-Risk levels are classified using quartiles:
-
-Low Risk  
-Moderate Risk  
-High Risk  
-Critical Risk
+1. Business Understanding  
+2. Data Understanding  
+3. Data Preparation  
+4. Exploratory Data Analysis  
+5. Hypothesis Testing  
+6. Fraud Risk Score Framework  
+7. Risk Insights  
+8. Business Recommendations  
 
 ---
 
-# Key Insights
+## 📊 Data Sources
 
-Major findings include:
+The dataset consists of the following tables:
 
-- Electronics present the **highest financial loss risk**
-- Supermarket products account for **most missing item incidents**
-- Drivers with **multiple IDs show elevated fraud risk**
-- Certain regions and time periods concentrate higher incident rates
-- High-value products significantly increase revenue loss impact
-
----
-
-# Fraud Risk Simulator
-
-An interactive Streamlit application was developed to simulate delivery fraud risk.
-
-Users can select delivery characteristics and estimate risk levels.
-
-The simulator includes:
-
-- Risk score calculation
-- Fraud risk classification
-- Risk gauge visualization
-- Risk contribution breakdown
-- Top risk drivers
-
-App link:
-
-https://delivery-fraud-risk-score-simulator-walmart.streamlit.app/
+| Table          | Description                          |
+|----------------|--------------------------------------|
+| Orders         | Delivery transaction records         |
+| Missing Items  | Reported missing products            |
+| Drivers        | Driver information                   |
+| Customers      | Customer characteristics             |
+| Products       | Product attributes                   |
 
 ---
 
-# Tech Stack
+## 🔬 Methodology
 
-Python  
-Pandas  
-NumPy  
-Streamlit  
-Plotly  
+### 📈 Exploratory Data Analysis (EDA)
+
+The EDA investigates operational patterns using:
+- Univariate analysis  
+- Bivariate analysis  
+- Hypothesis testing (H1–H12)  
+
+### Key dimensions analyzed:
+- Delivery period  
+- Region  
+- Product category  
+- Customer profile  
+- Driver characteristics  
+
+---
+
+## ⚠️ Fraud Risk Score Framework
+
+Since no fraud labels are available, a **Fraud Risk Score** was developed to identify high-risk operational segments.
+
+### 🔢 The score combines:
+- Missing item incidence  
+- Financial loss  
+- Operational anomalies  
+
+### 🚦 Risk Levels:
+
+| Score Range | Risk Level   |
+|------------|-------------|
+| 0 – 30     | Low Risk     |
+| 30 – 60    | Medium Risk  |
+| 60 – 100   | High Risk    |
+
+---
+
+## 🔍 Key Insights
+
+- High-value electronics generate the largest financial losses  
+- Supermarket items drive the highest frequency of missing items  
+- Drivers with multiple IDs show elevated operational risk  
+- Driver experience influences delivery performance  
+
+---
+
+## 💡 Business Recommendations
+
+- Enhance verification for high-value electronics  
+- Monitor drivers with multiple IDs  
+- Improve fulfillment accuracy for high-volume products  
+- Implement driver performance monitoring and training  
+- Develop a Fraud Risk Monitoring Dashboard  
+
+---
+
+## 📦 Project Deliverables
+
+### 📄 Technical Report  
+Full analytical workflow implemented in Python  
+
+### 📊 Executive Presentation  
+Business insights and recommendations for stakeholders  
+
+### 📈 Interactive Dashboard  
+Operational risk monitoring (Power BI / Looker Studio)  
+
+### 🤖 Fraud Risk Simulator  
+Streamlit application to estimate delivery risk based on input attributes  
+
+---
+
+## 🛠️ Tools Used
+
+- Python  
+- Pandas  
+- Scikit-learn  
+- Matplotlib / Seaborn  
+- Power BI / Looker Studio  
+- Streamlit  
+
+---
+
+## 👤 Author
+
+**Igor Queiroz**
 
 ---
 
