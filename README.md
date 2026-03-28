@@ -207,8 +207,9 @@ Streamlit application to estimate delivery risk based on input attributes
 
 # Project Structure
 
-Project Structure
+## Project Structure
 
+```bash
 ├── datasets
 │   └── raw
 │
@@ -243,6 +244,7 @@ Project Structure
 │
 ├── requirements.txt
 └── README.md
+```
 
 ---
 
