@@ -207,29 +207,28 @@ Streamlit application to estimate delivery risk based on input attributes
 
 # Project Structure
 
-│
 ├── datasets
-│   ├── raw
-│  
-├── documents
-│   ├── Project Walmart.pdf
+│   └── raw
 │
-├── fraud_ris_project_simulator_app
+├── documents
+│   └── Project Walmart.pdf
+│
+├── fraud_risk_project_simulator_app
 │   ├── data
-│       ├── df_final_risk_summary
+│   │   └── df_final_risk_summary.csv
 │   ├── app.py
-│   └── requirements
+│   └── requirements.txt
 │
 ├── images
 │   └── delivery_fraud_dimensions
 │
-├── interacirve_dashboard
+├── interactive_dashboard
 │   ├── datasets
-│       ├── processed
-│   ├── Walmart-Delivery-Fraud-Detection-Dashboarde.pbix
-│  
+│   │   └── processed
+│   └── Walmart-Delivery-Fraud-Detection-Dashboard.pbix
+│
 ├── notebooks
-│   ├── Walmart_Delivery_Fraud_Detection.ipynb
+│   └── Walmart_Delivery_Fraud_Detection.ipynb
 │
 ├── presentation
 │   └── Walmart - Fraud Risk Analysis in Delivery Operations.pptx
@@ -241,7 +240,6 @@ Streamlit application to estimate delivery risk based on input attributes
 │   └── Walmart_Delivery_Fraud_Detection.py
 │
 ├── requirements.txt
-│
 └── README.md
 
 ---
