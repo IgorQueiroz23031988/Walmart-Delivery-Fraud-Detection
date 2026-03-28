@@ -84,11 +84,11 @@ The EDA investigates operational patterns using:
 | Average Revenue Loss           | Financial Severity            | Avg. revenue loss per order |
 | Weighted Revenue Loss Rate     | Financial Impact              | Revenue loss vs order value |
 
-### Suporting Metrics (Proxy Metrics)
+### 📊 Suporting Metrics (Proxy Metrics)
 - Total Renevue Loss
 - Total Missing Items
 
-### Key Dimensions:
+### 🧭 Key Dimensions:
 - Delivery period  
 - Region  
 - Product category  
