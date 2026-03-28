@@ -5,6 +5,8 @@
 
 # 🚚 Walmart Delivery Fraud Risk Analysis
 
+![Risk Leaderboard](images/Walmart - Fraud Risk Analysis in Delivery Operations.png)
+
 ## 📌 Project Overview
 
 This project investigates operational risks related to **missing items in delivery orders**, focusing on identifying patterns that may indicate **fraud or operational failures**.
