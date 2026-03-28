@@ -5,6 +5,8 @@
 
 # 🚚 Walmart Delivery Fraud Risk Analysis
 
+![Fraud Risk Analysis](images/Walmart%20-%20Fraud%20Risk%20Analysis%20in%20Delivery%20Operations.png)
+
 ## 📌 Project Overview
 
 This project investigates operational risks related to **missing items in delivery orders**, focusing on identifying patterns that may indicate **fraud or operational failures**.
@@ -72,18 +74,21 @@ The EDA investigates operational patterns using:
 - Bivariate analysis  
 - Hypothesis testing (H1–H12)
 
-### Key metrics analyzed:
-- Missing Items Incidence Rate - Frequency of occurrence - Percentage of order with at least one missing item.
-- Average Missing Items - Error intensity (severity) - Average number of items missing per order.
-- Weighted Missing Items Rate - Real (Operational) Impact - Missing items relative to the total number of delivered items.
-- Average Revenue Loss - Financial intensity (severity) - Average revenue loss per order due to missing items.
-- Weighted Revenue Loss Rate - Real (Financial) impact - Revenue loss relative to the total order value.
+### 📊 Key Metrics:
 
-### Suporting Metrics (Proxy Metrics)
+| Metric                         | What it Measures              | Business Meaning |
+|--------------------------------|-------------------------------|------------------|
+| Missing Items Incidence Rate   | Frequency                     | % of orders with missing items |
+| Average Missing Items          | Severity                      | Number of items missing per order |
+| Weighted Missing Items Rate    | Operational Impact            | Missing items vs delivered items |
+| Average Revenue Loss           | Financial Severity            | Avg. revenue loss per order |
+| Weighted Revenue Loss Rate     | Financial Impact              | Revenue loss vs order value |
+
+### 📊 Suporting Metrics (Proxy Metrics)
 - Total Renevue Loss
 - Total Missing Items
 
-### Key dimensions analyzed:
+### 🧭 Key Dimensions:
 - Delivery period  
 - Region  
 - Product category  
@@ -106,8 +111,9 @@ Since no fraud labels are available, a **Fraud Risk Score** was developed to ide
 | Score Range | Risk Level   |
 |------------|-------------|
 | 0 – 30     | Low Risk     |
-| 30 – 60    | Medium Risk  |
-| 60 – 100   | High Risk    |
+| 25 – 50    | Medium Risk  |
+| 50 – 75   | High Risk    |
+| 75 – 100   | Critical Risk    |
 
 ---
 
@@ -146,7 +152,7 @@ Since no fraud labels are available, a **Fraud Risk Score** was developed to ide
 
 ---
 
-# Fraud Risk Simulator
+# 🤖 Fraud Risk Simulator
 
 An interactive Streamlit application was developed to simulate delivery fraud risk.
 
@@ -201,29 +207,31 @@ Streamlit application to estimate delivery risk based on input attributes
 
 # Project Structure
 
-│
+## 📁 Project Structure
+
+```bash
 ├── datasets
-│   ├── raw
-│  
-├── documents
-│   ├── Project Walmart.pdf
+│   └── raw
 │
-├── fraud_ris_project_simulator_app
+├── documents
+│   └── Project Walmart.pdf
+│
+├── fraud_risk_project_simulator_app
 │   ├── data
-│       ├── df_final_risk_summary
+│   │   └── df_final_risk_summary.csv
 │   ├── app.py
-│   └── requirements
+│   └── requirements.txt
 │
 ├── images
 │   └── delivery_fraud_dimensions
 │
-├── interacirve_dashboard
+├── interactive_dashboard
 │   ├── datasets
-│       ├── processed
-│   ├── Walmart-Delivery-Fraud-Detection-Dashboarde.pbix
-│  
+│   │   └── processed
+│   └── Walmart-Delivery-Fraud-Detection-Dashboard.pbix
+│
 ├── notebooks
-│   ├── Walmart_Delivery_Fraud_Detection.ipynb
+│   └── Walmart_Delivery_Fraud_Detection.ipynb
 │
 ├── presentation
 │   └── Walmart - Fraud Risk Analysis in Delivery Operations.pptx
@@ -235,12 +243,12 @@ Streamlit application to estimate delivery risk based on input attributes
 │   └── Walmart_Delivery_Fraud_Detection.py
 │
 ├── requirements.txt
-│
 └── README.md
+```
 
 ---
 
-# Future Improvements
+# 🚀 Future Improvements
 
 Possible extensions include:
 
