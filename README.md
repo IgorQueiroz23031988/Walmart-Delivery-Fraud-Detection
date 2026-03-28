@@ -5,7 +5,7 @@
 
 # 🚚 Walmart Delivery Fraud Risk Analysis
 
-![Risk Leaderboard](images/Walmart - Fraud Risk Analysis in Delivery Operations.png)
+![Fraud Risk Analysis](images/Walmart%20-%20Fraud%20Risk%20Analysis%20in%20Delivery%20Operations.png)
 
 ## 📌 Project Overview
 
