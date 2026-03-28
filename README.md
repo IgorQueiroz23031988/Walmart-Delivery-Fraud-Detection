@@ -111,8 +111,9 @@ Since no fraud labels are available, a **Fraud Risk Score** was developed to ide
 | Score Range | Risk Level   |
 |------------|-------------|
 | 0 – 30     | Low Risk     |
-| 30 – 60    | Medium Risk  |
-| 60 – 100   | High Risk    |
+| 25 – 50    | Medium Risk  |
+| 50 – 75   | High Risk    |
+| 75 – 100   | Critical Risk    |
 
 ---
 
