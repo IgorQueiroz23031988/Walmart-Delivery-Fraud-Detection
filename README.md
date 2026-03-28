@@ -170,6 +170,8 @@ App link:
 
 https://delivery-fraud-risk-score-simulator-walmart.streamlit.app/
 
+![Simulator Demo](images/Fraud_Risk_Simulaotr_demo.gif)
+
 ---
 
 ## 📦 Project Deliverables
