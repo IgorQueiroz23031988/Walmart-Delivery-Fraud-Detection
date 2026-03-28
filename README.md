@@ -7,7 +7,7 @@
 
 ## 📌 Project Overview
 
-This project investigates operational risks related to missing items in delivery orders, focusing on identifying patterns that may indicate fraud or operational failures.
+This project investigates operational risks related to **missing items in delivery orders**, focusing on identifying patterns that may indicate **fraud or operational failures**.
 
 The analysis combines **Exploratory Data Analysis (EDA)**, **Hypothesis Testing**, and a **Fraud Risk Score Framework** to detect high-risk operational scenarios and support decision-making.
 
