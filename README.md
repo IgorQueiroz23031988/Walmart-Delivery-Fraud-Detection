@@ -21,9 +21,9 @@ The analysis combines **Exploratory Data Analysis (EDA)**, **Hypothesis Testing*
 
 ## 💼 Business Problem
 
-Delivery operations reported an increasing number of missing items, leading to operational complaints and financial losses.
+Delivery operations reported an increasing number of **missing items**, leading to operational complaints and **financial losses**.
 
-However, the dataset does not contain fraud labels, preventing traditional supervised fraud detection.
+However, the dataset **does not contain fraud labels**, preventing traditional supervised fraud detection.
 
 ### 🎯 Objective:
 Identify patterns of operational risk and potential fraud indicators across:
@@ -70,7 +70,18 @@ The dataset consists of the following tables:
 The EDA investigates operational patterns using:
 - Univariate analysis  
 - Bivariate analysis  
-- Hypothesis testing (H1–H12)  
+- Hypothesis testing (H1–H12)
+
+### Key metrics analyzed:
+- Missing Items Incidence Rate - Frequency of occurrence - Percentage of order with at least one missing item.
+- Average Missing Items - Error intensity (severity) - Average number of items missing per order.
+- Weighted Missing Items Rate - Real (Operational) Impact - Missing items relative to the total number of delivered items.
+- Average Revenue Loss - Financial intensity (severity) - Average revenue loss per order due to missing items.
+- Weighted Revenue Loss Rate - Real (Financial) impact - Revenue loss relative to the total order value.
+
+### Suporting Metrics (Proxy Metrics)
+- Total Renevue Loss
+- Total Missing Items
 
 ### Key dimensions analyzed:
 - Delivery period  
@@ -105,17 +116,53 @@ Since no fraud labels are available, a **Fraud Risk Score** was developed to ide
 - High-value electronics generate the largest financial losses  
 - Supermarket items drive the highest frequency of missing items  
 - Drivers with multiple IDs show elevated operational risk  
-- Driver experience influences delivery performance  
+- Driver experience influences delivery performance
+- Higher risk in mornings /early week
+- Financial Impact Outweighs Incident Frequency Across Regions and Customers
 
 ---
 
 ## 💡 Business Recommendations
 
-- Enhance verification for high-value electronics  
-- Monitor drivers with multiple IDs  
-- Improve fulfillment accuracy for high-volume products  
-- Implement driver performance monitoring and training  
-- Develop a Fraud Risk Monitoring Dashboard  
+1. Protect High-Value Orders:
+- Enforce delivery confirmation (photo + verification)
+- Use tamper-proof packaging
+
+2. Strengthen Driver Identity Control
+- Flag multiple ID accounts
+- Implement identity verification
+
+3.  Improve High-Volume Operations
+- Add picking validation
+- User automated order checks
+
+4. Develop Driver Performance Strategy
+- Train mid-experience drivers
+- Incentivize delivery accuracy
+
+5. Implement Risk Monitoring System
+- Track high-risk segments in real time
+- Monitor products, drivers, and time windows
+
+---
+
+# Fraud Risk Simulator
+
+An interactive Streamlit application was developed to simulate delivery fraud risk.
+
+Users can select delivery characteristics and estimate risk levels.
+
+The simulator includes:
+
+- Risk score calculation
+- Fraud risk classification
+- Risk gauge visualization
+- Risk contribution breakdown
+- Top risk drivers
+
+App link:
+
+https://delivery-fraud-risk-score-simulator-walmart.streamlit.app/
 
 ---
 
@@ -155,37 +202,41 @@ Streamlit application to estimate delivery risk based on input attributes
 # Project Structure
 
 │
-├── data
+├── datasets
 │   ├── raw
-│   └── processed
+│  
+├── documents
+│   ├── Project Walmart.pdf
 │
-├── notebooks
-│   ├── 01_data_understanding.ipynb
-│   ├── 02_data_preparation.ipynb
-│   ├── 03_feature_engineering.ipynb
-│   ├── 04_eda.ipynb
-│   ├── 05_risk_framework.ipynb
-│
-├── dashboard
-│   ├── powerbi_file.pbix
-│
-├── streamlit_app
+├── fraud_ris_project_simulator_app
+│   ├── data
+│       ├── df_final_risk_summary
 │   ├── app.py
-│   └── model.pkl
-│
-├── presentation
-│   └── fraud_risk_presentation.pptx
-│
-├── report
-│   └── fraud_risk_report.pdf
+│   └── requirements
 │
 ├── images
-│   └── charts_for_readme
+│   └── delivery_fraud_dimensions
+│
+├── interacirve_dashboard
+│   ├── datasets
+│       ├── processed
+│   ├── Walmart-Delivery-Fraud-Detection-Dashboarde.pbix
+│  
+├── notebooks
+│   ├── Walmart_Delivery_Fraud_Detection.ipynb
+│
+├── presentation
+│   └── Walmart - Fraud Risk Analysis in Delivery Operations.pptx
+│
+├── report
+│   └── Walmart_Delivery_Fraud_Detection_report.pdf
+│
+├── scripts
+│   └── Walmart_Delivery_Fraud_Detection.py
 │
 ├── requirements.txt
 │
 └── README.md
-
 
 ---
 
