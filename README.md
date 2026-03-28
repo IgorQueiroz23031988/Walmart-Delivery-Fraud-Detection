@@ -74,18 +74,21 @@ The EDA investigates operational patterns using:
 - Bivariate analysis  
 - Hypothesis testing (H1–H12)
 
-### Key metrics analyzed:
-- Missing Items Incidence Rate - Frequency of occurrence - Percentage of order with at least one missing item.
-- Average Missing Items - Error intensity (severity) - Average number of items missing per order.
-- Weighted Missing Items Rate - Real (Operational) Impact - Missing items relative to the total number of delivered items.
-- Average Revenue Loss - Financial intensity (severity) - Average revenue loss per order due to missing items.
-- Weighted Revenue Loss Rate - Real (Financial) impact - Revenue loss relative to the total order value.
+### 📊 Key Metrics:
+
+| Metric                         | What it Measures              | Business Meaning |
+|--------------------------------|-------------------------------|------------------|
+| Missing Items Incidence Rate   | Frequency                     | % of orders with missing items |
+| Average Missing Items          | Severity                      | Number of items missing per order |
+| Weighted Missing Items Rate    | Operational Impact            | Missing items vs delivered items |
+| Average Revenue Loss           | Financial Severity            | Avg. revenue loss per order |
+| Weighted Revenue Loss Rate     | Financial Impact              | Revenue loss vs order value |
 
 ### Suporting Metrics (Proxy Metrics)
 - Total Renevue Loss
 - Total Missing Items
 
-### Key dimensions analyzed:
+### Key Dimensions:
 - Delivery period  
 - Region  
 - Product category  
